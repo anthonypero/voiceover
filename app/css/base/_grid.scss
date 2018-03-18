@@ -1,3 +1,7 @@
 body { position: relative; } /* exists to stop autocreation of css file */
 
 /* Sitewide Grid */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}

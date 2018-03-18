@@ -1,3 +1,40 @@
 body { position: relative; } /* exists to stop autocreation of css file */
 
 /* Section Header Feature */
+
+.section--header {
+
+  background-color: $black;
+  position: relative;
+  min-height: 68.5rem;
+  margin: 0;
+  padding: 0;
+
+  &__wrapper {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__title {
+    color: $off_white;
+    text-transform: uppercase;
+    font-size: 8.8rem;
+    font-weight: 900;
+    padding-bottom: 1.5rem;
+  }
+
+  &__subtitle {
+    color: $off_white;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 3.1rem;
+    letter-spacing: 1rem;
+    position: relative;
+    top: -1rem;
+    padding-bottom: 1rem;
+  }
+}

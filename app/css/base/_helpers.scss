@@ -1,0 +1,25 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float: right;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-both {
+  clear: both;
+}

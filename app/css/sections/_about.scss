@@ -1,3 +1,10 @@
 body { position: relative; } /* exists to stop autocreation of css file */
 
 /* About Section */
+
+.section--header__about {
+
+  background: url('../images/backgrounds/techbooth.jpg') center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}

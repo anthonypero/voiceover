@@ -4,6 +4,7 @@
 @import "base/reset";
 @import "base/fonts";
 @import "base/variables";
+@import "base/helpers";
 @import "base/grid";
 @import "base/typography";
 
@@ -15,6 +16,7 @@
 /* Import Section Styles */
 
 @import "sections/identity";
+@import "sections/header";
 @import "sections/demos";
 @import "sections/clients";
 @import "sections/services";

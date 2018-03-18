@@ -4,36 +4,42 @@
 <head>
   <meta charset="utf-8">
   <title>Anthony Pero, Voiceover Talent | A warm, versatile </title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header>
+  <header class="site-header clearfix navbar-visible">
 
-    <div class="mini-identity">
-      <div class="title">Anthony Pero</div>
-      <div class="subtitle">Voiceover Talent</div>
-    </div>
+    <a href="#top" class="site-link" alt="Home" title="Home">
+      <div class="mini-identity left clear-left">
+        <div class="title">Anthony Pero</div>
+        <div class="subtitle">Voiceover Talent</div>
+      </div>
+    </a>
 
-    <nav class="main-navigation">
+    <nav class="main-navigation right clear-right">
       <ul class="main-menu menu">
-        <li class="menu--item"><a href="#demos">Demos</a></li>
-        <li class="menu--item"><a href="#clients">Clients</a></li>
-        <li class="menu--item"><a href="#services">Services</a></li>
-        <li class="menu--item"><a href="#about">About</a></li>
-        <li class="menu--item"><a href="#contact">Contact</a></li>
+        <li class="menu--item"><a class="menu--item__link" href="#demos">Demos</a></li>
+        <li class="menu--item"><a class="menu--item__link" href="#clients">Clients</a></li>
+        <li class="menu--item"><a class="menu--item__link" href="#services">Services</a></li>
+        <li class="menu--item"><a class="menu--item__link" href="#about">About</a></li>
+        <li class="menu--item"><a class="menu--item__link" href="#contact">Contact</a></li>
       </ul>
     </nav>
 
   </header>
 
+  <a name="top"></a>
   <h1 class="section--header section--header__main">
-      <div class="section-header__icon"><img src="images/logo-white.png" alt=""></div>
-      <div class="section-header__title">Anthony Pero</div>
-      <div class="section-header__subtitle">Voiceover Talent</div>
-      <div class="section-header__audioform"><img src="images/audioform-white.png" alt=""></div>
-    </h1>
+    <div class="section--header__wrapper">
+      <div class="section--header__icon"><img src="images/logo-white-large.png" alt=""></div>
+      <div class="section--header__title">Anthony Pero</div>
+      <div class="section--header__subtitle">Voiceover Talent</div>
+      <div class="section--header__audioform"><img src="images/audioform-white.png" alt=""></div>
+    </div>
+  </h1>
 
   <a name="demos"></a>
 
@@ -47,6 +53,8 @@
       <div class="row">
         <div class="col-1-of-3">
           <div class="audio-demo">
+            <h4 class="audio-demo--title">TTI - Phone System</h4>
+            <div class="audio-demo--download"><a href="demos/tti-phone.mp3" class="audio-demo--download__link">Download</a></div>
             <audio controls>
                 <source src="demos/tti-phone.mp3" type="audio/mp3">
                 <source src="demos/tti-phone.ogg" type="audio/ogg">
@@ -55,6 +63,8 @@
         </div>
         <div class="col-1-of-3">
           <div class="audio-demo">
+            <h4 class="audio-demo--title">Shawnee Alliance - Narration</h4>
+            <div class="audio-demo--download"><a href="demos/shawnee-alliance.mp3" class="audio-demo--download__link">Download</a></div>
             <audio controls>
                 <source src="demos/shawnee-alliance.mp3" type="audio/mp3">
                 <source src="demos/shawnee-alliance.ogg" type="audio/ogg">
@@ -63,6 +73,8 @@
         </div>
         <div class="col-1-of-3">
           <div class="audio-demo">
+            <h4 class="audio-demo--title">Oreck - Radio Spot</h4>
+            <div class="audio-demo--download"><a href="demos/oreck.mp3" class="audio-demo--download__link">Download</a></div>
             <audio controls>
                 <source src="demos/oreck.mp3" type="audio/mp3">
                 <source src="demos/oreck.ogg" type="audio/ogg">
@@ -74,6 +86,8 @@
       <div class="row">
         <div class="col-1-of-2">
           <div class="video-demo">
+            <h4 class="video-demo--title">Hoover - Football Announcer</h4>
+            <div class="video-demo--download"><a href="demos/hoover.mp4" class="video-demo--download__link">Download</a></div>
             <video poster="demos/hoover-poster.jpg" controls>
                 <source src="demos/hoover.mp4" type="video/mp4">
                 <source src="demos/hoover.webm" type="video/webm">
@@ -82,6 +96,8 @@
         </div>
         <div class="col-1-of-2">
           <div class="video-demo">
+            <h4 class="video-demo--title">Dirt Devil - Trailer</h4>
+            <div class="video-demo--download"><a href="demos/hoover.mp4" class="video-demo--download__link">Download</a></div>
             <video poster="demos/dirtdevil-poster.jpg" controls>
                 <source src="demos/dirtdevil.mp4" type="video/mp4">
                 <source src="demos/dirtdevil.webm" type="video/webm">
@@ -96,9 +112,11 @@
   <a name="clients"></a>
 
   <h2 class="section--header section--header__clients">
-      <div class="section-header__title">Clients</div>
-      <div class="section-header__audioform"><img src="images/audioform-white.png" alt=""></div>
-    </h2>
+    <div class="section--header__wrapper">
+      <div class="section--header__title">Clients</div>
+      <div class="section--header__audioform"><img src="images/audioform-white.png" alt=""></div>
+    </div>
+  </h2>
 
   <section class="section section--body section--clients">
 
@@ -139,8 +157,10 @@
     <a name="services"></a>
 
     <h2 class="section--header section--header__services">
-      <div class="section-header__title">Services</div>
-      <div class="section-header__audioform"><img src="images/audioform-white.png" alt=""></div>
+      <div class="section--header__wrapper">
+        <div class="section--header__title">Services</div>
+        <div class="section--header__audioform"><img src="images/audioform-white.png" alt=""></div>
+      </div>
     </h2>
 
     <section class="section section--body section--services">
@@ -203,9 +223,11 @@
   <a name="about"></a>
 
   <h2 class="section--header section--header__about">
-      <div class="section-header__title">About</div>
-      <div class="section-header__audioform"><img src="images/audioform-white.png" alt=""></div>
-    </h2>
+    <div class="section--header__wrapper">
+      <div class="section--header__title">About</div>
+      <div class="section--header__audioform"><img src="images/audioform-white.png" alt=""></div>
+    </div>
+  </h2>
 
   <section class="section section--body section--about">
 
@@ -220,9 +242,11 @@
   <a name="contact"></a>
 
   <h2 class="section--header section--header__contact">
-      <div class="section-header__title">Contact</div>
-      <div class="section-header__audioform"><img src="images/audioform-white.png" alt=""></div>
-    </h2>
+    <div class="section--header__wrapper">
+      <div class="section--header__title">Contact</div>
+      <div class="section--header__audioform"><img src="images/audioform-white.png" alt=""></div>
+    </div>
+  </h2>
 
   <section class="section section--body section--contact">
 

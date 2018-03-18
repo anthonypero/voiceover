@@ -345,23 +345,67 @@ body {
 /* exists to stop autocreation of css file */
 /* Sitewide Fonts */
 body {
+  font-family: 'Lato', 'Arial', 'Verdana', sans-serif;
+}
+
+body {
   position: relative;
 }
 
 /* exists to stop autocreation of css file */
 /* Sitewide Variables */
+/* Colors */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-both {
+  clear: both;
+}
+
 body {
   position: relative;
 }
 
 /* exists to stop autocreation of css file */
 /* Sitewide Grid */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
 }
 
 /* exists to stop autocreation of css file */
 /* Sitewide Typography */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #e6e6e6;
+}
+
 /* Import Features */
 body {
   position: relative;
@@ -369,6 +413,41 @@ body {
 
 /* exists to stop autocreation of css file */
 /* Section Header Feature */
+.section--header {
+  background-color: #0b0b0b;
+  position: relative;
+  min-height: 68.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.section--header__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.section--header__title {
+  color: #e6e6e6;
+  text-transform: uppercase;
+  font-size: 8.8rem;
+  font-weight: 900;
+  padding-bottom: 1.5rem;
+}
+
+.section--header__subtitle {
+  color: #e6e6e6;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 3.1rem;
+  letter-spacing: 1rem;
+  position: relative;
+  top: -1rem;
+  padding-bottom: 1rem;
+}
+
 body {
   position: relative;
 }
@@ -382,6 +461,105 @@ body {
 
 /* exists to stop autocreation of css file */
 /* Identity Section */
+.section--header__main {
+  background: url("../images/backgrounds/headphones.jpg") top center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  height: 105rem;
+}
+
+.section--header__main .section--header__icon {
+  margin-bottom: 4rem;
+}
+
+body {
+  position: relative;
+}
+
+/* exists to stop autocreation of css file */
+/* Header Section */
+.site-header {
+  height: 13rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  width: 100%;
+}
+
+.site-header .mini-identity {
+  padding-left: 7.5rem;
+  background: url("../images/logo-black-small.png") top left no-repeat;
+  background-size: contain;
+  height: 9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #252525;
+}
+
+.site-header .mini-identity .title {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  padding-top: 1.8rem;
+  text-align: center;
+  line-height: 3rem;
+}
+
+.site-header .mini-identity .subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  padding-top: 1.3rem;
+  line-height: 1rem;
+}
+
+.site-header .main-navigation {
+  padding-top: 5.6rem;
+}
+
+.site-header .main-navigation .menu {
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header .main-navigation .menu--item {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  padding-left: 6rem;
+}
+
+.site-header .main-navigation .menu--item__link {
+  color: #252525;
+  text-decoration: none;
+  letter-spacing: .2rem;
+}
+
+.site-header .main-navigation .menu--item__link:hover {
+  border-bottom: 2px solid;
+}
+
+.navbar-hidden {
+  background-color: transparent;
+}
+
+.navbar-hidden .site-link {
+  display: none;
+}
+
+.navbar-hidden .main-navigation .menu--item__link {
+  color: #e6e6e6;
+}
+
 body {
   position: relative;
 }
@@ -394,24 +572,48 @@ body {
 
 /* exists to stop autocreation of css file */
 /* Clients Section */
+.section--header__clients {
+  background: url("../images/backgrounds/mic1.jpg") center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 body {
   position: relative;
 }
 
 /* exists to stop autocreation of css file */
 /* Services Section */
+.section--header__services {
+  background: url("../images/backgrounds/speaker.jpg") center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 body {
   position: relative;
 }
 
 /* exists to stop autocreation of css file */
 /* About Section */
+.section--header__about {
+  background: url("../images/backgrounds/techbooth.jpg") center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 body {
   position: relative;
 }
 
 /* exists to stop autocreation of css file */
 /* Contact Section */
+.section--header__contact {
+  background: url("../images/backgrounds/mic-grill.jpg") center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 body {
   position: relative;
 }

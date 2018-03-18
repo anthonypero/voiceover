@@ -1,3 +1,10 @@
 body { position: relative; } /* exists to stop autocreation of css file */
 
 /* Clients Section */
+
+.section--header__clients {
+
+  background: url('../images/backgrounds/mic1.jpg') center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
