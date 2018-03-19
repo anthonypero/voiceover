@@ -8,6 +8,11 @@
 @import "base/grid";
 @import "base/typography";
 
+/* Import external library css */
+
+@import "external/lightslider.css";
+@import "external/plyr.css";
+
 /* Import Features */
 
 @import "features/section--header";
@@ -23,3 +28,7 @@
 @import "sections/about";
 @import "sections/contact";
 @import "sections/footer";
+
+/* Import Awesomesauce */
+
+@import "awesomesauce/parallax";

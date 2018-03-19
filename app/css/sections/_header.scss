@@ -9,11 +9,12 @@ body { position: relative; } /* exists to stop autocreation of css file */
   background-color: $white;
   padding-left: 8rem;
   padding-right: 8rem;
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   z-index: 10000;
   width: 100%;
+  transition: background .5s, display .5s;
 
   .mini-identity {
 

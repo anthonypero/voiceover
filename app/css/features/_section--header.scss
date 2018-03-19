@@ -4,8 +4,9 @@ body { position: relative; } /* exists to stop autocreation of css file */
 
 .section--header {
 
-  background-color: $black;
+  // background-color: $black;
   position: relative;
+  width: 100%;
   min-height: 68.5rem;
   margin: 0;
   padding: 0;

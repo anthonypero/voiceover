@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass app/css/style.scss app/css/style.css -w"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "plyr": "^3.0.0-beta.20"
   },
   "devDependencies": {
-    "lightslider": "^1.1.6"
+    "lightslider": "^1.1.6",
+    "node-sass": "^4.7.2"
   }
 }

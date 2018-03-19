@@ -1,3 +1,33 @@
 body { position: relative; } /* exists to stop autocreation of css file */
 
 /* Section Body Feature */
+
+.section--body {
+  background-color: $off_white;
+  padding: ($gutter_width * 4) 0;
+}
+
+.lead {
+  margin: 0 $gutter_width $gutter_width;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 5rem;
+  color: $off_black;
+  border: 1px solid;
+  text-align: center;;
+  padding: $gutter_width ($gutter_width * 2);
+
+  strong {
+    font-weight: 900;
+  }
+}
+
+.description {
+  margin: $gutter_width;
+  padding: $gutter_width 0 ($gutter_width * 2);
+  font-size: 2.5rem;
+  border-bottom: 1px solid;
+  text-align: center;
+  color: $off_black;
+  line-height: 4rem;
+}
