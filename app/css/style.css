@@ -321,6 +321,27 @@ body {
 /* Sitewide Variables */
 /* Colors */
 /* Grid */
+/* Media Query Manager */
+/* --- Breakpoints ------------
+
+    phone:        000  -  499;
+      grid_width = 100%;
+
+    tPortrait:    500  -  799;
+      grid_width = 500px
+
+    tLandscape:   800  -  1199;
+      grid_width = 720px
+
+    sdDesktop:    1200 -  1599;
+      grid_width = 960px
+
+    hdDesktop:    1600 -  1999;
+      grid_width = 1440px
+
+    xlDesktop:    2000+
+
+------------------------------- */
 .clearfix::after {
   content: "";
   clear: both;
@@ -344,9 +365,10 @@ body {
 .fixed {
   position: fixed !important; }
 
-.column-3 {
-  column-count: 2;
-  column-gap: 5rem; }
+@media (min-width: 75em) {
+  .column-3 {
+    column-count: 2;
+    column-gap: 5rem; } }
 
 .disclaimer {
   font-size: 2rem;
@@ -368,23 +390,42 @@ body {
   box-sizing: border-box; }
 
 .container {
-  width: 160rem;
+  width: 100%;
   margin: 0 auto; }
+  @media (min-width: 31.25em) {
+    .container {
+      width: 500px; } }
+  @media (min-width: 50em) {
+    .container {
+      width: 720px; } }
+  @media (min-width: 75em) {
+    .container {
+      width: 960px; } }
+  @media (min-width: 100em) {
+    .container {
+      width: 1440px; } }
+  @media (min-width: 125em) {
+    .container {
+      width: 1600px; } }
 
 .row {
   clear: both; }
 
 .col {
-  padding: 2.5rem; }
+  padding: 2.5rem;
+  width: 100%; }
 
-.col-1-of-3 {
-  width: 53.33333rem; }
+@media (min-width: 75em) {
+  .col-1-of-3 {
+    width: 33.33333%; } }
 
-.col-2-of-3 {
-  width: 106.66667rem; }
+@media (min-width: 75em) {
+  .col-2-of-3 {
+    width: 66.66667%; } }
 
-.col-1-of-2 {
-  width: 80rem; }
+@media (min-width: 75em) {
+  .col-1-of-2 {
+    width: 50%; } }
 
 body {
   position: relative; }
@@ -392,7 +433,10 @@ body {
 /* exists to stop autocreation of css file */
 /* Sitewide Typography */
 html {
-  font-size: 62.5%; }
+  font-size: 50%; }
+  @media (min-width: 125em) {
+    html {
+      font-size: 62.5%; } }
 
 body {
   font-size: 1.6rem;
@@ -416,30 +460,63 @@ body {
 .section--header {
   position: relative;
   width: 100%;
-  min-height: 68.5rem;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  min-height: 25rem; }
+  @media (min-width: 31.25em) {
+    .section--header {
+      min-height: 50rem; } }
+  @media (min-width: 100em) {
+    .section--header {
+      min-height: 68.5rem; } }
   .section--header__wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+    transform: translate(-50%, -40%);
+    text-align: center;
+    max-width: 96vw; }
+    @media (min-width: 100em) {
+      .section--header__wrapper {
+        transform: translate(-50%, -50%); } }
   .section--header__title {
     color: #e6e6e6;
     text-transform: uppercase;
-    font-size: 8.8rem;
     font-weight: 900;
+    font-size: 7.8rem;
+    padding-bottom: 1.5rem;
+    font-size: 5.8rem;
     padding-bottom: 1.5rem; }
+    @media (min-width: 100em) {
+      .section--header__title {
+        font-size: 8.8rem;
+        padding-bottom: 1.5rem; } }
   .section--header__subtitle {
     color: #e6e6e6;
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 3.1rem;
     letter-spacing: 1rem;
     position: relative;
     top: -1rem;
+    font-size: 2rem;
     padding-bottom: 1rem; }
+    @media (min-width: 75em) {
+      .section--header__subtitle {
+        font-size: 2.5rem;
+        padding-bottom: 1rem; } }
+    @media (min-width: 100em) {
+      .section--header__subtitle {
+        font-size: 3.1rem;
+        padding-bottom: 1rem; } }
+  .section--header__audioform {
+    width: 50.5rem;
+    max-width: 100%; }
+    @media (min-width: 75em) {
+      .section--header__audioform {
+        width: 67.5rem; } }
+    .section--header__audioform img {
+      max-width: 100%;
+      max-height: 100%; }
 
 body {
   position: relative; }
@@ -448,17 +525,23 @@ body {
 /* Section Body Feature */
 .section--body {
   background-color: #e6e6e6;
-  padding: 10rem 0; }
+  padding: 5rem 0; }
+  @media (min-width: 50em) {
+    .section--body {
+      padding: 10rem 0; } }
 
 .lead {
   margin: 0 2.5rem 2.5rem;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 5rem;
   color: #252525;
   border: 1px solid;
   text-align: center;
-  padding: 2.5rem 5rem; }
+  padding: 2.5rem 5rem;
+  font-size: 4rem; }
+  @media (min-width: 100em) {
+    .lead {
+      font-size: 5rem; } }
   .lead strong {
     font-weight: 900; }
 
@@ -478,13 +561,53 @@ body {
 /* exists to stop autocreation of css file */
 /* Identity Section */
 .section--header__main {
-  background: #0b0b0b url("../images/backgrounds/headphones.jpg") top center no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   margin: 0;
-  height: 105rem; }
+  background: #0b0b0b url("../images/backgrounds/headphones-small.jpg") 59% 0% no-repeat;
+  background-attachment: fixed;
+  height: 65rem; }
+  @media (min-width: 50em) {
+    .section--header__main {
+      background: #0b0b0b url("../images/backgrounds/headphones-small.jpg") 55% 0% no-repeat;
+      background-attachment: fixed; } }
+  @media (min-width: 75em) {
+    .section--header__main {
+      background: #0b0b0b url("../images/backgrounds/headphones-small.jpg") 100% 0% no-repeat;
+      background-attachment: fixed; } }
+  @media (min-width: 100em) {
+    .section--header__main {
+      background: #0b0b0b url("../images/backgrounds/headphones.jpg") top center no-repeat;
+      background-size: cover;
+      background-attachment: fixed; } }
+  @media (min-width: 50em) {
+    .section--header__main {
+      height: 70rem; } }
+  @media (min-width: 75em) {
+    .section--header__main {
+      height: 85rem; } }
+  @media (min-width: 100em) {
+    .section--header__main {
+      height: 105rem; } }
   .section--header__main .section--header__icon {
-    margin-bottom: 4rem; }
+    text-align: center;
+    width: 100%;
+    height: 18rem;
+    margin-bottom: 1.5rem; }
+    @media (min-width: 50em) {
+      .section--header__main .section--header__icon {
+        height: 18rem;
+        margin-bottom: 1.5rem; } }
+    @media (min-width: 100em) {
+      .section--header__main .section--header__icon {
+        height: 29rem;
+        margin-bottom: 4rem; } }
+    .section--header__main .section--header__icon img {
+      max-width: 100%;
+      max-height: 100%; }
+  .section--header__main .section--header__wrapper {
+    transform: translate(-50%, -40%); }
+    @media (min-width: 100em) {
+      .section--header__main .section--header__wrapper {
+        transform: translate(-50%, -50%); } }
 
 body {
   position: relative; }
@@ -603,29 +726,39 @@ body {
 /* exists to stop autocreation of css file */
 /* Clients Section */
 .section--header__clients {
-  background: url("../images/backgrounds/mic1.jpg") center center no-repeat;
+  background: url("../images/backgrounds/mic1-portrait.jpg") center center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
+  @media (min-width: 31.25em) {
+    .section--header__clients {
+      background: url("../images/backgrounds/mic1-small.jpg") center center no-repeat;
+      background-attachment: fixed;
+      background-size: cover; } }
+  @media (min-width: 100em) {
+    .section--header__clients {
+      background: url("../images/backgrounds/mic1.jpg") center center no-repeat;
+      background-attachment: fixed;
+      background-size: cover; } }
 
 .section--body__clients {
   background: #0b0b0b; }
   .section--body__clients .lead {
     color: #e6e6e6; }
   .section--body__clients .lightSlider {
-    height: 20rem; }
+    height: 243px; }
   .section--body__clients .row-container {
     position: relative; }
   .section--body__clients .row-overlay-1 {
     background: linear-gradient(to right, #0b0b0b, rgba(255, 255, 255, 0));
-    height: 20rem;
-    width: 6.66667rem;
+    height: 243px;
+    width: 4.16667%;
     position: absolute;
     left: 0;
     z-index: 50; }
   .section--body__clients .row-overlay-2 {
     background: linear-gradient(to left, #0b0b0b, rgba(255, 255, 255, 0));
-    height: 20rem;
-    width: 6.66667rem;
+    height: 243px;
+    width: 4.16667%;
     position: absolute;
     right: 0;
     z-index: 50; }
@@ -637,8 +770,8 @@ body {
     background-repeat: no-repeat;
     opacity: .5;
     transition: opacity .3s;
-    width: 20rem;
-    height: 20rem;
+    width: 200px;
+    height: 200px;
     color: rgba(11, 11, 11, 0); }
     .section--body__clients .slider-card h4:hover {
       opacity: 1; }
@@ -665,9 +798,19 @@ body {
 /* exists to stop autocreation of css file */
 /* Services Section */
 .section--header__services {
-  background: url("../images/backgrounds/speaker.jpg") center center no-repeat;
+  background: url("../images/backgrounds/speaker-portrait.jpg") center center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
+  @media (min-width: 31.25em) {
+    .section--header__services {
+      background: url("../images/backgrounds/speaker-small.jpg") 75% 50% no-repeat;
+      background-attachment: fixed;
+      background-size: cover; } }
+  @media (min-width: 50em) {
+    .section--header__services {
+      background: url("../images/backgrounds/speaker.jpg") center center no-repeat;
+      background-attachment: fixed;
+      background-size: cover; } }
 
 .card {
   background: #ffffff;
@@ -713,9 +856,19 @@ body {
 /* exists to stop autocreation of css file */
 /* About Section */
 .section--header__about {
-  background: url("../images/backgrounds/techbooth.jpg") center center no-repeat;
+  background: url("../images/backgrounds/techbooth-portrait.jpg") center center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
+  @media (min-width: 31.25em) {
+    .section--header__about {
+      background: url("../images/backgrounds/techbooth-small.jpg") center center no-repeat;
+      background-attachment: fixed;
+      background-size: cover; } }
+  @media (min-width: 100em) {
+    .section--header__about {
+      background: url("../images/backgrounds/techbooth-small.jpg") center center no-repeat;
+      background-attachment: fixed;
+      background-size: cover; } }
 
 .section--body__about p {
   font-size: 2.5rem;
@@ -734,7 +887,13 @@ body {
   border: 1px solid;
   padding: 2.5rem;
   background-color: rgba(255, 255, 255, 0);
-  transition: background-color .3s; }
+  transition: background-color .3s;
+  max-width: 500px;
+  margin: 0 auto; }
+  @media (min-width: 75em) {
+    .section--body__about .img-wrapper {
+      max-width: none;
+      margin: inherit; } }
   .section--body__about .img-wrapper:hover {
     background-color: white; }
   .section--body__about .img-wrapper img {
@@ -751,9 +910,19 @@ body {
 /* exists to stop autocreation of css file */
 /* Contact Section */
 .section--header__contact {
-  background: url("../images/backgrounds/mic-grill.jpg") center center no-repeat;
+  background: url("../images/backgrounds/mic-grill-portrait.jpg") center center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
+  @media (min-width: 31.25em) {
+    .section--header__contact {
+      background: url("../images/backgrounds/mic-grill.jpg") center center no-repeat;
+      background-attachment: fixed;
+      background-size: cover; } }
+  @media (min-width: 100em) {
+    .section--header__contact {
+      background: url("../images/backgrounds/mic-grill.jpg") center center no-repeat;
+      background-attachment: fixed;
+      background-size: cover; } }
 
 .section--body__contact {
   background-color: #252525; }
@@ -761,8 +930,12 @@ body {
     color: #ffffff; }
 
 .contact--other {
-  position: absolute;
-  right: 0; }
+  margin-top: 2.5rem; }
+  @media (min-width: 75em) {
+    .contact--other {
+      position: absolute;
+      right: 0;
+      margin-top: 0; } }
   .contact--other__inner {
     border: 1px solid #ffffff;
     color: #ffffff;
@@ -773,26 +946,39 @@ body {
     text-transform: uppercase;
     padding: 2.5rem;
     border-bottom: 1px solid;
-    font-size: 3rem; }
+    font-size: 2.2rem; }
+    @media (min-width: 100em) {
+      .contact--other__title {
+        font-size: 3rem; } }
   .contact--other__item {
     border-bottom: 1px solid #ffffff;
     position: relative; }
     .contact--other__item__link {
       display: block;
-      font-size: 2.5rem;
+      font-size: 2rem;
       padding: 2.5rem;
       color: #ffffff;
       font-weight: 300; }
+      @media (min-width: 100em) {
+        .contact--other__item__link {
+          font-size: 2.5rem; } }
       .contact--other__item__link:hover {
         border: none;
         color: #ffffff;
         font-weight: bold; }
     .contact--other__item__icon {
       position: absolute;
-      left: 4rem;
-      top: 2rem;
+      left: 3rem;
+      top: 2.1rem;
       display: block;
-      font-size: 4rem; }
+      font-size: 3rem; }
+      @media (min-width: 100em) {
+        .contact--other__item__icon {
+          left: 4rem;
+          top: 2rem; } }
+      @media (min-width: 100em) {
+        .contact--other__item__icon {
+          font-size: 4rem; } }
   .contact--other__twitter__link:hover {
     background-color: #1da1f2; }
   .contact--other__linkedin {

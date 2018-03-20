@@ -29,8 +29,10 @@
 }
 
 .column-3 {
-  column-count: 2;
-  column-gap: ($gutter_width * 2);
+  @include respond(sdDesktop) {
+    column-count: 2;
+    column-gap: ($gutter_width * 2);
+  }
 }
 
 .disclaimer {

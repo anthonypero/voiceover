@@ -4,9 +4,21 @@ body { position: relative; } /* exists to stop autocreation of css file */
 
 .section--header__clients {
 
-  background: url('../images/backgrounds/mic1.jpg') center center no-repeat;
+  background: url('../images/backgrounds/mic1-portrait.jpg') center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
+  @include respond(tPortrait) {
+    background: url('../images/backgrounds/mic1-small.jpg') center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  @include respond(hdDesktop) {
+    background: url('../images/backgrounds/mic1.jpg') center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 .section--body__clients {
@@ -17,7 +29,7 @@ body { position: relative; } /* exists to stop autocreation of css file */
   }
 
   .lightSlider {
-    height: ($grid_width / 8);
+    height: 243px;
   }
 
   .row-container {
@@ -26,8 +38,8 @@ body { position: relative; } /* exists to stop autocreation of css file */
 
   .row-overlay-1 {
     background: linear-gradient(to right, $black, rgba($white, 0));
-    height: ($grid_width / 8);
-    width: (($grid_width / 8) / 3);
+    height: 243px;
+    width: ((100% / 8) / 3);
     position:absolute;
     left: 0;
     z-index: 50;
@@ -35,8 +47,8 @@ body { position: relative; } /* exists to stop autocreation of css file */
 
   .row-overlay-2 {
     background: linear-gradient(to left, $black, rgba($white, 0));
-    height: ($grid_width / 8);
-    width: (($grid_width / 8) / 3);
+    height: 243px;
+    width: ((100% / 8) / 3);
     position:absolute;
     right: 0;
     z-index: 50;
@@ -56,8 +68,8 @@ body { position: relative; } /* exists to stop autocreation of css file */
     background-repeat: no-repeat;
     opacity: .5;
     transition: opacity .3s;
-    width: ($grid_width / 8);
-    height: ($grid_width / 8);
+    width: 200px;
+    height: 200px;
     color: rgba($black, 0);
 
 

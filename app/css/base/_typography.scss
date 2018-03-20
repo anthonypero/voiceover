@@ -3,7 +3,11 @@ body { position: relative; } /* exists to stop autocreation of css file */
 /* Sitewide Typography */
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
+
+  @include respond(xlDesktop) {
+    font-size: 62.5%;
+  }
 }
 
 body {

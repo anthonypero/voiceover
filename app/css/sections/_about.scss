@@ -4,9 +4,21 @@ body { position: relative; } /* exists to stop autocreation of css file */
 
 .section--header__about {
 
-  background: url('../images/backgrounds/techbooth.jpg') center center no-repeat;
+  background: url('../images/backgrounds/techbooth-portrait.jpg') center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
+  @include respond(tPortrait) {
+    background: url('../images/backgrounds/techbooth-small.jpg') center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  @include respond(hdDesktop) {
+    background: url('../images/backgrounds/techbooth-small.jpg') center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 .section--body__about {
@@ -34,6 +46,14 @@ body { position: relative; } /* exists to stop autocreation of css file */
     padding: ($gutter_width);
     background-color: rgba($white, 0);
     transition: background-color .3s;
+
+    max-width: 500px;
+    margin: 0 auto;
+
+    @include respond(sdDesktop) {
+      max-width: none;
+      margin: inherit;
+    }
 
     &:hover {
       background-color: rgba($white, 1);

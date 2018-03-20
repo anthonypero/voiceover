@@ -4,9 +4,21 @@ body { position: relative; } /* exists to stop autocreation of css file */
 
 .section--header__services {
 
-  background: url('../images/backgrounds/speaker.jpg') center center no-repeat;
+  background: url('../images/backgrounds/speaker-portrait.jpg') center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
+  @include respond(tPortrait) {
+    background: url('../images/backgrounds/speaker-small.jpg') 75% 50% no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  @include respond(tLandscape) {
+    background: url('../images/backgrounds/speaker.jpg') center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 .card {
